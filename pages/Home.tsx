@@ -200,7 +200,7 @@ export const Home: React.FC = () => {
                </div>
                <p className="text-gray-400 font-body mb-6">
                  Military-grade sensors detect Chemical, Biological, Radiological, and Nuclear threats. 
-                 Squad Mesh provides offline communication range > 1000m.
+                 Squad Mesh provides offline communication range &gt; 1000m.
                </p>
                <ul className="space-y-2 text-sm text-gray-300 font-mono">
                   <li>+ MIL-STD-810H Certified</li>
