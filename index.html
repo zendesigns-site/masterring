@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ring | Precision in Life & Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#101010', // Nero/Grigio Carbone
+              action: '#EEEEEE', // Bianco Ottico/Grigio Chiaro
+              tech: '#00FFFF', // Blu Elettrico / Ciano
+              techDark: '#0077FF',
+              consumer: '#00C896', // Verde Menta
+              consumerGold: '#FFD700', // Oro Morbido
+              tactical: '#A52A2A', // Rosso Scuro
+              tacticalOlive: '#5A5A4A', // Verde Militare Opaco
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+            backgroundImage: {
+              'blueprint': "linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)"
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #101010;
+        color: #EEEEEE;
+      }
+      /* Custom scrollbar for technical feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #101010;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00FFFF;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
