@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -8,17 +9,25 @@ export const Navigation: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Luxury', path: '/luxury' },
     { name: 'Consumer', path: '/consumer' },
     { name: 'Tactical', path: '/tactical' },
     { name: 'Technology', path: '/technology' },
     { name: 'Ecosystem', path: '/ecosystem' },
-    { name: 'Investors', path: '/investors' },
   ];
 
   const getLinkClass = (path: string) => {
     const isActive = location.pathname === path;
-    const base = "text-sm font-semibold tracking-wider transition-colors duration-300 hover:text-tech";
-    return isActive ? `${base} text-tech underline underline-offset-4` : `${base} text-action`;
+    const isLuxury = path === '/luxury';
+    
+    let base = "text-sm font-semibold tracking-wider transition-colors duration-300 ";
+    if (isLuxury) {
+        base += "hover:text-consumerGold text-consumerGold/80 ";
+    } else {
+        base += "hover:text-tech text-action ";
+    }
+    
+    return isActive ? `${base} underline underline-offset-4` : base;
   };
 
   return (
