@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
@@ -8,6 +9,7 @@ import { Tactical } from './pages/Tactical';
 import { Technology } from './pages/Technology';
 import { Ecosystem } from './pages/Ecosystem';
 import { Investors } from './pages/Investors';
+import { Luxury } from './pages/Luxury';
 
 // ScrollToTop component to handle scroll position on route change
 const ScrollToTop = () => {
@@ -27,6 +29,7 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/luxury" element={<Luxury />} />
             <Route path="/consumer" element={<Consumer />} />
             <Route path="/tactical" element={<Tactical />} />
             <Route path="/technology" element={<Technology />} />
