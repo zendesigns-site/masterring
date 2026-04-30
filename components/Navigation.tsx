@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Cpu } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,6 +15,7 @@ export const Navigation: React.FC = () => {
     { name: 'Technology', path: '/technology' },
     { name: 'Ecosystem', path: '/ecosystem' },
     { name: 'Palette Assets', path: '/palette-assets' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const getLinkClass = (path: string) => {
@@ -36,8 +37,13 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold tracking-tighter text-white">
-              ORBYX<span className="text-tech">™</span>
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-tech rounded flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Cpu className="text-black" size={18} />
+              </div>
+              <span className="text-lg font-extrabold tracking-tighter text-white">
+                SMART<span className="text-tech">RING</span>
+              </span>
             </Link>
           </div>
           
