@@ -11,6 +11,7 @@ import { Ecosystem } from './pages/Ecosystem';
 import { Investors } from './pages/Investors';
 import { Luxury } from './pages/Luxury';
 import { PaletteAssets } from './pages/PaletteAssets';
+import { Contact } from './pages/Contact';
 
 // ScrollToTop component to handle scroll position on route change
 const ScrollToTop = () => {
@@ -37,6 +38,7 @@ const App: React.FC = () => {
             <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/palette-assets" element={<PaletteAssets />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
