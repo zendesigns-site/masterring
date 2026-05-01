@@ -60,7 +60,7 @@ const CSSRing = ({ color }: { color: string }) => (
     />
     <div className={`w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-${color} shadow-[0_0_50px_rgba(0,255,255,0.3)] flex items-center justify-center relative overflow-hidden group`}>
        <div className={`absolute inset-0 bg-gradient-to-tr from-${color}/20 via-transparent to-white/5`}></div>
-       <Cpu size={40} className={`text-${color} group-hover:scale-110 transition-transform`} />
+       <MessageSquare size={40} className={`text-${color} group-hover:scale-110 transition-transform`} />
        <motion.div 
          animate={{ opacity: [0.1, 0.4, 0.1] }}
          transition={{ duration: 2, repeat: Infinity }}
@@ -106,14 +106,14 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <span className={`font-mono text-xs uppercase tracking-[0.6em] mb-6 block text-${theme.color} font-bold transition-colors`}>
-              Become a Founding Node
+              Direct Communication Channel
             </span>
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-8 leading-tight">
-              Direct <br />
-              <span className={`text-transparent bg-clip-text bg-gradient-to-r from-${theme.color} via-white to-gray-500`}>Uplink</span>
+              Get in <br />
+              <span className={`text-transparent bg-clip-text bg-gradient-to-r from-${theme.color} via-white to-gray-500`}>Touch</span>
             </h1>
             <p className="text-gray-400 font-body text-xl max-w-xl leading-relaxed">
-              Step beyond a static interaction. Establish a direct connection with the team engineering the next era of <span className="text-white font-bold italic">situational awareness</span>.
+              Have questions about our hardware or software architecture? Connect with our specialist team for technical support, press inquiries, or partnership opportunities.
             </p>
           </motion.div>
 
@@ -215,15 +215,15 @@ export const Contact: React.FC = () => {
                     <div className="w-24 h-24 bg-tech/20 rounded-full flex items-center justify-center mx-auto mb-10 border border-tech/30 shadow-[0_0_40px_rgba(0,255,255,0.2)]">
                       <CheckCircle2 size={48} className="text-tech" />
                     </div>
-                    <h2 className="text-5xl font-black uppercase mb-6 tracking-tighter italic">Packet Received</h2>
+                    <h2 className="text-5xl font-black uppercase mb-6 tracking-tighter italic">Message Received</h2>
                     <p className="text-gray-500 mb-12 max-w-sm mx-auto text-lg">
-                      We have verified your node. A senior strategist will initialize contact on your communication line.
+                      Thank you for reaching out. A specialist from our team will contact you at your provided email address shortly.
                     </p>
                     <button 
                       onClick={() => setFormStatus('idle')}
                       className="group px-14 py-5 bg-white text-black rounded-full font-black uppercase text-[10px] tracking-[0.4em] hover:bg-tech hover:scale-105 active:scale-95 transition-all flex items-center mx-auto space-x-4"
                     >
-                      <span>New Transmission</span>
+                      <span>New Message</span>
                       <ArrowRight size={16} />
                     </button>
                   </motion.div>
@@ -235,44 +235,45 @@ export const Contact: React.FC = () => {
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                       <div className="space-y-4">
-                        <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Operator Name</label>
+                        <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Full Name</label>
                         <input 
                           required
                           type="text" 
-                          placeholder="FULL NAME"
+                          placeholder="Your Name"
                           className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-8 py-6 focus:outline-none focus:border-tech/50 focus:bg-tech/[0.05] transition-all text-sm font-bold placeholder:text-gray-800"
                         />
                       </div>
                       <div className="space-y-4">
-                        <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Comms Endpoint</label>
+                        <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Email Address</label>
                         <input 
                           required
                           type="email" 
-                          placeholder="SECURE@NODE.IO"
+                          placeholder="email@example.com"
                           className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-8 py-6 focus:outline-none focus:border-tech/50 focus:bg-tech/[0.05] transition-all text-sm font-bold placeholder:text-gray-800"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-4">
-                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Primary Objective</label>
+                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Inquiry Type</label>
                       <select 
                         className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-8 py-6 focus:outline-none focus:border-tech/50 transition-all text-sm font-bold appearance-none cursor-pointer"
                         defaultValue=""
                       >
-                        <option value="" disabled className="bg-primary">DEFINE SECTOR</option>
-                        <option value="consumer" className="bg-primary">LIFE OPTIMIZATION (BIOMETRICS)</option>
-                        <option value="tactical" className="bg-primary">OPERATIONAL RESILIENCE (TACTICAL)</option>
-                        <option value="luxury" className="bg-primary">COLLECTOR ACQUISITION (LUXURY)</option>
+                        <option value="" disabled className="bg-primary">Select accurate category</option>
+                        <option value="consumer" className="bg-primary">Support - Consumer Edition</option>
+                        <option value="tactical" className="bg-primary">Support - Tactical Edition</option>
+                        <option value="luxury" className="bg-primary">Sales - Luxury Pieces</option>
+                        <option value="partnership" className="bg-primary">Partnerships & Investors</option>
                       </select>
                     </div>
 
                     <div className="space-y-4">
-                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Mission Payload</label>
+                      <label className="text-[10px] font-black text-gray-500 uppercase tracking-[0.4em] ml-2">Message Details</label>
                       <textarea 
                         required
                         rows={5}
-                        placeholder="ENTER TRANSMISSION PACKET DATA..."
+                        placeholder="How can we assist you today?"
                         className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-8 py-6 focus:outline-none focus:border-tech/50 transition-all text-sm font-bold placeholder:text-gray-800 resize-none"
                       ></textarea>
                     </div>
@@ -283,7 +284,7 @@ export const Contact: React.FC = () => {
                             <Shield size={20} className="text-tech" />
                          </div>
                          <div className="flex flex-col">
-                            <span className="text-[8px] font-black uppercase tracking-[0.3em] text-gray-500">Security Node</span>
+                            <span className="text-[8px] font-black uppercase tracking-[0.3em] text-gray-500">Secure Protocol</span>
                             <span className="text-[10px] font-mono text-white tracking-widest">AES-256 ENCRYPTED</span>
                          </div>
                       </div>
@@ -298,7 +299,7 @@ export const Contact: React.FC = () => {
                         }`}
                       >
                          <Send size={16} />
-                         <span>{formStatus === 'sending' ? 'Transmitting...' : 'Send Packet'}</span>
+                         <span>{formStatus === 'sending' ? 'Sending...' : 'Send Message'}</span>
                          <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
                       </button>
                     </div>
@@ -328,3 +329,5 @@ export const Contact: React.FC = () => {
     </div>
   );
 };
+
+
